@@ -1,18 +1,19 @@
 import React from "react";
+import "./App.css";
+import { HashRouter, Route } from "react-router-dom";
+import About from "./routes/About";
+import Home from "./routes/Home";
+import Navigation from "./components/Navigation";
+import Detail from "./routes/Detail";
 
-function Food(props) {
-  const { fav } = props;
-  return <h1>I like {fav}</h1>;
-}
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
-      <Food fav="닭갈비" />
-      <Food fav="라멘" />
-      <Food fav="갈비찜" />
-      <Food fav="파스타" />
-    </div>
+    <HashRouter>
+      <Navigation />
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/movie-detail" component={Detail} />
+    </HashRouter>
   );
 }
 

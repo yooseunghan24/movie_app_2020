@@ -1,4 +1,4 @@
-# Movie App 2020
+# Movie App 2020 (Made of React)
 
 React JS Fundamentals Course 2020
 * 사이트 바로가기
